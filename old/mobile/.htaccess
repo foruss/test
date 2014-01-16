@@ -1,0 +1,6 @@
+AddDefaultCharset utf-8
+php_flag register_globals on
+RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /
+RewriteRule ^.htaccess$ - [F]

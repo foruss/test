@@ -1,0 +1,28 @@
+<public:component lightWeight="true">
+<script>
+	var IE5_5up = /MSIE ((5\.5)|[6])/.test(navigator.userAgent) && navigator.platform == "Win32";
+	if(IE5_5up){
+		if(element.tagName == "IMG"){
+			var src = element.src;
+			element.src = src.substring(0, src.lastIndexOf("/")) + "/x.gif";
+			element.runtimeStyle.filter = "progid:DXImageTransform.Microsoft." +
+						"AlphaImageLoader(src='" + src + "',sizingMethod='scale')";	
+		}
+		else{
+			var bgSrc = element.currentStyle.backgroundImage;
+			if(bgSrc == "none") {
+				bgSrc = element.bgSrc;
+			}
+			else {
+				element.bgSrc = bgSrc;
+			}
+
+			var sizingMethod = (element.currentStyle.backgroundRepeat=="no-repeat")? 'crop' : 'scale';
+			bgSrc = bgSrc.substring(5, bgSrc.length-2);
+			element.runtimeStyle.backgroundImage = "none";
+			element.runtimeStyle.filter = "progid:DXImageTransform.Microsoft." +
+						"AlphaImageLoader(src='" + bgSrc + "',sizingMethod='" + sizingMethod + "')";	
+		}			
+	}
+</script>
+</public:component>

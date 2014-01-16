@@ -1,0 +1,24 @@
+div.auto-lenta div#auto-list {
+	margin-left: -70px;
+}
+
+.auction-block {
+	left: -5px;
+}
+
+#menu_main .over a { 
+	color: #fffde7;
+	background: url('/img/menu-item-sel.gif') 50% 0 no-repeat;
+}
+
+#menu_main .dropdown a.first-item {
+	background:  url('/img/submenu-first-item.gif') 0 0 no-repeat;
+}
+
+#menu_main .dropdown a.item {
+	background: url('/img/submenu-item.gif') 0 0 no-repeat;
+}
+
+#menu_main .dropdown a.end-item {
+	background: url('/img/submenu-end-item.gif') 0 0 no-repeat;
+}

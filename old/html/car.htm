@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>automix || Машина отдельно</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="author" content="Rebulus" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="js/srSelect.js"></script>
+<script type="text/javascript" src="js/srCheckbox.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jScrollPane.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+
+	$('.scroll').jScrollPane({showArrows:true, scrollbarWidth: 13, arrowSize: 16});
+
+	/* Движение анимированной линейки */
+	var widthDiv = ($('a.m_item').eq(0).width()/1)*($('a.m_item').length);
+	$('.move-obj').eq(0).css('width',widthDiv + 'px');
+	var widthThreeDivRight = 0;
+	var widthThreeDivLeft = ($('a.m_item').eq(0).width()/1)*($('a.m_item').length-6)
+	var flag = true;
+	
+	$("a.arrow_r").click(function(){
+		if(flag == true)
+			if(widthThreeDivLeft > Math.abs($('.move-obj').eq(0).css('marginLeft').substring(0,$('.move-obj').eq(0).css('marginLeft').indexOf('px'))))
+				{
+					flag = false;
+					$('.move-obj').eq(0).animate({'marginLeft':"-=122px"},400, "swing", function(){
+						flag = true;
+					});
+				};
+		return false;
+	});
+	$("a.arrow_l").click(function(){
+		if(flag == true)
+			if(widthThreeDivRight > $('.move-obj').eq(0).css('marginLeft').substring(0,$('.move-obj').eq(0).css('marginLeft').indexOf('px'))) {
+				flag = false;
+				$('.move-obj').eq(0).animate({marginLeft:"+=122px"},400,function(){
+					flag = true;
+				});
+			};
+		return false;
+	});
+	/* ///Движение анимированной линейки */
+	
+	/* Переключение пунктов описания авто */
+	$('.a_i_menu li a').click(function(){
+		$('.a_i_desc').parent().removeClass();
+		$('.a_i_desc').parent().addClass('d_none');
+		$('.a_i_menu li').removeClass('act');
+		$(this).parent().addClass('act');
+		for(i=0;i<=$('.a_i_menu li').length;i++)
+			{
+				if($('.a_i_menu li').eq(i).hasClass('act')){
+					$('.a_i_desc').eq(i).parent().removeClass();
+					$('.a_i_desc').eq(i).parent().addClass('d_block');
+				};
+			};
+		return false;
+	});
+	/* ////Переключение пунктов описания авто */
+});
+//-->
+</script>
+</head>
+
+<body>
+
+<!-- Контейнер для сайта -->
+<div id="wrap">
+	<div id="wrap_c">
+	
+		<!-- Основная часть страницы -->
+		<div id="basis">
+			
+			<!-- Центральный столбец -->
+			<div id="center-frame">
+				
+				<!-- Универсальный блок -->
+				<div class="u_block left">
+					<div class="u_block-cont">
+						<!-- Блок фото авто -->
+						<div class="auto_foto">				
+							<div class="h2">Mercedes AMG, 2006:</div>
+							<!-- Большое фото авто -->
+							<div class="big_auto">
+								<img src="images/car/big_car.jpg" width="358" height="238" alt="" />
+								<div class="cost">$53 000</div>
+							</div>
+							<!-- /Большое фото авто -->
+							<div class="small_auto">
+								<a class="open_wind" href="#">Открыть все фото в одном окне</a>
+								<!-- Скроллинг маленьких фото авто -->
+								<div class="scroll">
+									<div class="s_m_cont">
+										<a href="#"><img src="images/car/small_car_01.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_02.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_03.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_04.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_01.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_02.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_03.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_04.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_01.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_02.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_03.jpg" width="132" height="87" alt="" /></a>
+										<a href="#"><img src="images/car/small_car_04.jpg" width="132" height="87" alt="" /></a>
+									</div>
+								</div>
+								<!-- /Скроллинг маленьких фото авто -->
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!-- Блок фото авто -->												
+					</div>
+					<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+				</div>
+				<!-- /Универсальный блок -->
+				
+				<!-- Центральное меню -->
+				<div class="center_menu">
+					<div class="c_m_l"><div class="c_m_r">
+						<ul>
+							<li><a href="#">Показать другу</a></li>
+							<li><a href="#">Задать вопрос</a></li>
+							<li><a href="#">Распечатать</a></li>
+							<li class="end"><a href="#">Таможенные сборы</a></li>
+						</ul>
+					</div></div>
+				</div>
+				<!-- /Центральное меню -->
+				
+				<!-- Информация о покупке -->
+				<div class="price_info">
+				
+					<!-- Универсальный блок -->
+					<div class="u_block">
+						<div class="u_block-cont">
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr class="gr">
+									<td style="width:67px">Year:</td>
+									<td><div>2009</div></td>
+								</tr>
+								<tr>
+									<td>Make:</td>
+									<td><div>Acura</div></td>
+								</tr>
+								<tr class="gr">
+									<td>Model:</td>
+									<td><div>TSX</div></td>
+								</tr>
+								<tr>
+									<td>Mileage:</td>
+									<td><div>12000</div></td>
+								</tr>
+								<tr class="gr">
+									<td>Engine:</td>
+									<td><div>2.4L DOHC PGM-FI 16-valve i-VTEC I4 engine</div></td>
+								</tr>
+								<tr>
+									<td>Exterior:</td>
+									<td><div>Gray</div></td>
+								</tr>
+								<tr class="gr">
+									<td>Interior:</td>
+									<td><div>Black</div></td>
+								</tr>
+								<tr>
+									<td>Price:</td>
+									<td><div>$25,990</div></td>
+								</tr>
+								<tr class="gr">
+									<td>VIN:</td>
+									<td><div>JH4CU266X9C003278 <a href="#"><img src="img/carfax.jpg" width="76" height="15" alt="carfax" /></a></div></td>
+								</tr>
+							</table>		
+						</div>
+						<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+					</div>
+					<!-- /Универсальный блок -->
+					
+					<!-- Информация о продавце -->
+					<div class="seller">
+						<!-- Универсальный блок -->
+						<div class="u_block">
+							<div class="u_block-cont">
+								<h4>Dealer Contact</h4>
+								<p>Auto Web Expo, Inc.<br />
+								Dillon Omid Rohani<br />
+								972-247-0003<br />
+								<a href="info@autowebexpo.com">info@autowebexpo.com</a></p>
+								<div class="center">
+									<a href="#"><img src="img/apply_now.jpg" width="164" height="59" alt="" /></a>
+								</div>
+							</div>
+							<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+						</div>
+						<!-- /Универсальный блок -->
+					</div>
+					<!-- /Информация о продавце -->
+					
+					<div class="clear"></div>
+				</div>
+				<!-- /Информация о покупке -->
+				
+				<!-- Информация об авто -->
+				<div class="auto_info">
+					
+					<!-- Меню информации об авто -->
+					<ul class="a_i_menu">
+						<li class="act"><a href="#"><span>Инфо о машине</span></a></li>
+						<li><a href="#"><span>Condition report</span></a></li>
+						<li><a href="#"><span>Что с ней было</span></a></li>
+					</ul>
+					<!-- /Меню информации об авто -->
+					<!-- Универсальный блок -->
+					<div class="u_block left">
+						<div class="u_block-cont">
+							<!-- Скроллинг описания 1 -->
+							<div class="d_block">
+							<div class="a_i_desc">
+								<div class="scroll">
+									<table cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td class="a_i_left">
+												<h4>#1</h4>
+												<p>Продавец: <span class="red">DEALER</span><br />
+												Прогнозируемая цена: <span class="gray">Нет данных</span><br />	
+												Местоположение: <span class="red">Manheim Tampa / FL</span><br />
+												Дата и время проведения аукциона: <span class="gray">Нет данных</span></p>
+												
+												<h4>Информация об автомобиле</h4>
+												
+												<p>Марка: <span class="red">MERCEDES-BENZ</span><br />
+												Модель: <span class="red">CLS CLASS</span><br />
+												Год выпуска: <span class="red">2009</span><br />
+												Модификация: <span class="red">CLS550</span><br />
+												Пробег: <span class="red">5,200 mi</span><br />
+												Двигатель: <span class="red">8 цил. бензин</span><br />
+												Объем двигателя:  <span class="gray">Нет данных</span><br />
+												Трансмиссия: <span class="red">Автоматическая</span><br />
+												Дата обслуживания: <span class="gray">Нет данных</span><br />
+												Цвет кузова: <span class="red">Black</span><br />
+												Цвет салона: <span class="red">Tan</span><br />
+												Стикер: <span class="gray">Нет данных</span><br />
+												VIN: <span class="red">WDDDJ72XX9A142631</span><br />
+												Кузов: <span class="red">Седан</span><br />
+												Дверей: <span class="red">4</span><br />
+												Вид: <span class="red">Легковой автомобиль</span></p>
+												
+												<h4>Информация об автомобиле</h4>
+												
+												<p>Марка: <span class="red">MERCEDES-BENZ</span><br />
+												Модель: <span class="red">CLS CLASS</span><br />
+												Год выпуска: <span class="red">2009</span><br />
+												Модификация: <span class="red">CLS550</span><br />
+												Пробег: <span class="red">5,200 mi</span><br />
+												Двигатель: <span class="red">8 цил. бензин</span><br />
+												Объем двигателя:  <span class="gray">Нет данных</span><br />
+												Трансмиссия: <span class="red">Автоматическая</span><br />
+												Дата обслуживания: <span class="gray">Нет данных</span><br />
+												Цвет кузова: <span class="red">Black</span><br />
+												Цвет салона: <span class="red">Tan</span><br />
+												Стикер: <span class="gray">Нет данных</span><br />
+												VIN: <span class="red">WDDDJ72XX9A142631</span><br />
+												Кузов: <span class="red">Седан</span><br />
+												Дверей: <span class="red">4</span><br />
+												Вид: <span class="red">Легковой автомобиль</span></p>
+											</td>
+											<td class="a_i_right">
+												<h4 class="top">Комплектация</h4>
+
+												<ul>
+													<li>Air Bag - Side Curtain	</li>
+													<li>Кондиционер</li>	
+													<li>Airbags</li>
+													<li>Легкосплавные диски</li>	
+													<li>Antilock Brakes</li>	
+													<li>Child Seat Anchors</li>
+													<li>Круиз-контроль	</li>
+													<li>Dual Climate Control	</li>
+													<li>DVD</li>
+													<li>GPS</li>	
+													<li>Подогрев сидений</li>	
+													<li>Power Brakes</li>
+													<li>Power Door Locks</li>
+													<li>Зеркала с электроприводом</li>	
+													<li>Элетрорегулировка сидений</li>
+													<li>Усилитель рулевого управления</li>
+													<li>Электрические стеклоподъемники	Rear Window Defroster</li>
+													<li>Tilt/Telescope Wheel</li>	
+													<li>Тонированные стекла</li>
+												</ul>
+												
+												<h4>Комплектация</h4>
+
+												<ul>
+													<li>Air Bag - Side Curtain	</li>
+													<li>Кондиционер</li>	
+													<li>Airbags</li>
+													<li>Легкосплавные диски</li>	
+													<li>Antilock Brakes</li>	
+													<li>Child Seat Anchors</li>
+													<li>Круиз-контроль	</li>
+													<li>Dual Climate Control	</li>
+													<li>DVD</li>
+													<li>GPS</li>	
+													<li>Подогрев сидений</li>	
+													<li>Power Brakes</li>
+													<li>Power Door Locks</li>
+													<li>Зеркала с электроприводом</li>	
+													<li>Элетрорегулировка сидений</li>
+													<li>Усилитель рулевого управления</li>
+													<li>Электрические стеклоподъемники	Rear Window Defroster</li>
+													<li>Tilt/Telescope Wheel</li>	
+													<li>Тонированные стекла</li>
+												</ul>
+											</td>
+										</tr>
+									</table>
+								</div>									
+							</div>
+							</div>
+							<!-- /Скроллинг описания 1 -->
+							<!-- Скроллинг описания 2 -->
+							<div class="d_none">
+							<div class="a_i_desc">
+								<div class="scroll">
+									<table cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td class="a_i_left">
+												<h4>#2</h4>
+												<p>Продавец: <span class="red">DEALER</span><br />
+												Прогнозируемая цена: <span class="gray">Нет данных</span><br />	
+												Местоположение: <span class="red">Manheim Tampa / FL</span><br />
+												Дата и время проведения аукциона: <span class="gray">Нет данных</span></p>
+												
+												<h4>Информация об автомобиле</h4>
+												
+												<p>Марка: <span class="red">MERCEDES-BENZ</span><br />
+												Модель: <span class="red">CLS CLASS</span><br />
+												Год выпуска: <span class="red">2009</span><br />
+												Модификация: <span class="red">CLS550</span><br />
+												Пробег: <span class="red">5,200 mi</span><br />
+												Двигатель: <span class="red">8 цил. бензин</span><br />
+												Объем двигателя:  <span class="gray">Нет данных</span><br />
+												Трансмиссия: <span class="red">Автоматическая</span><br />
+												Дата обслуживания: <span class="gray">Нет данных</span><br />
+												Цвет кузова: <span class="red">Black</span><br />
+												Цвет салона: <span class="red">Tan</span><br />
+												Стикер: <span class="gray">Нет данных</span><br />
+												VIN: <span class="red">WDDDJ72XX9A142631</span><br />
+												Кузов: <span class="red">Седан</span><br />
+												Дверей: <span class="red">4</span><br />
+												Вид: <span class="red">Легковой автомобиль</span></p>
+												
+												<h4>Информация об автомобиле</h4>
+												
+												<p>Марка: <span class="red">MERCEDES-BENZ</span><br />
+												Модель: <span class="red">CLS CLASS</span><br />
+												Год выпуска: <span class="red">2009</span><br />
+												Модификация: <span class="red">CLS550</span><br />
+												Пробег: <span class="red">5,200 mi</span><br />
+												Двигатель: <span class="red">8 цил. бензин</span><br />
+												Объем двигателя:  <span class="gray">Нет данных</span><br />
+												Трансмиссия: <span class="red">Автоматическая</span><br />
+												Дата обслуживания: <span class="gray">Нет данных</span><br />
+												Цвет кузова: <span class="red">Black</span><br />
+												Цвет салона: <span class="red">Tan</span><br />
+												Стикер: <span class="gray">Нет данных</span><br />
+												VIN: <span class="red">WDDDJ72XX9A142631</span><br />
+												Кузов: <span class="red">Седан</span><br />
+												Дверей: <span class="red">4</span><br />
+												Вид: <span class="red">Легковой автомобиль</span></p>
+											</td>
+											<td class="a_i_right">
+												<h4 class="top">Комплектация</h4>
+
+												<ul>
+													<li>Air Bag - Side Curtain	</li>
+													<li>Кондиционер</li>	
+													<li>Airbags</li>
+													<li>Легкосплавные диски</li>	
+													<li>Antilock Brakes</li>	
+													<li>Child Seat Anchors</li>
+													<li>Круиз-контроль	</li>
+													<li>Dual Climate Control	</li>
+													<li>DVD</li>
+													<li>GPS</li>	
+													<li>Подогрев сидений</li>	
+													<li>Power Brakes</li>
+													<li>Power Door Locks</li>
+													<li>Зеркала с электроприводом</li>	
+													<li>Элетрорегулировка сидений</li>
+													<li>Усилитель рулевого управления</li>
+													<li>Электрические стеклоподъемники	Rear Window Defroster</li>
+													<li>Tilt/Telescope Wheel</li>	
+													<li>Тонированные стекла</li>
+												</ul>
+												
+												<h4>Комплектация</h4>
+
+												<ul>
+													<li>Air Bag - Side Curtain	</li>
+													<li>Кондиционер</li>	
+													<li>Airbags</li>
+													<li>Легкосплавные диски</li>	
+													<li>Antilock Brakes</li>	
+													<li>Child Seat Anchors</li>
+													<li>Круиз-контроль	</li>
+													<li>Dual Climate Control	</li>
+													<li>DVD</li>
+													<li>GPS</li>	
+													<li>Подогрев сидений</li>	
+													<li>Power Brakes</li>
+													<li>Power Door Locks</li>
+													<li>Зеркала с электроприводом</li>	
+													<li>Элетрорегулировка сидений</li>
+													<li>Усилитель рулевого управления</li>
+													<li>Электрические стеклоподъемники	Rear Window Defroster</li>
+													<li>Tilt/Telescope Wheel</li>	
+													<li>Тонированные стекла</li>
+												</ul>
+											</td>
+										</tr>
+									</table>
+								</div>									
+							</div>
+							</div>
+							<!-- /Скроллинг описания 2 -->
+							<!-- Скроллинг описания 3 -->
+							<div class="d_none">
+							<div class="a_i_desc">
+								<div class="scroll">
+									<table cellpadding="0" cellspacing="0" border="0">
+										<tr>
+											<td class="a_i_left">
+												<h4>#3</h4>
+												<p>Продавец: <span class="red">DEALER</span><br />
+												Прогнозируемая цена: <span class="gray">Нет данных</span><br />	
+												Местоположение: <span class="red">Manheim Tampa / FL</span><br />
+												Дата и время проведения аукциона: <span class="gray">Нет данных</span></p>
+												
+												<h4>Информация об автомобиле</h4>
+												
+												<p>Марка: <span class="red">MERCEDES-BENZ</span><br />
+												Модель: <span class="red">CLS CLASS</span><br />
+												Год выпуска: <span class="red">2009</span><br />
+												Модификация: <span class="red">CLS550</span><br />
+												Пробег: <span class="red">5,200 mi</span><br />
+												Двигатель: <span class="red">8 цил. бензин</span><br />
+												Объем двигателя:  <span class="gray">Нет данных</span><br />
+												Трансмиссия: <span class="red">Автоматическая</span><br />
+												Дата обслуживания: <span class="gray">Нет данных</span><br />
+												Цвет кузова: <span class="red">Black</span><br />
+												Цвет салона: <span class="red">Tan</span><br />
+												Стикер: <span class="gray">Нет данных</span><br />
+												VIN: <span class="red">WDDDJ72XX9A142631</span><br />
+												Кузов: <span class="red">Седан</span><br />
+												Дверей: <span class="red">4</span><br />
+												Вид: <span class="red">Легковой автомобиль</span></p>
+												
+												<h4>Информация об автомобиле</h4>
+												
+												<p>Марка: <span class="red">MERCEDES-BENZ</span><br />
+												Модель: <span class="red">CLS CLASS</span><br />
+												Год выпуска: <span class="red">2009</span><br />
+												Модификация: <span class="red">CLS550</span><br />
+												Пробег: <span class="red">5,200 mi</span><br />
+												Двигатель: <span class="red">8 цил. бензин</span><br />
+												Объем двигателя:  <span class="gray">Нет данных</span><br />
+												Трансмиссия: <span class="red">Автоматическая</span><br />
+												Дата обслуживания: <span class="gray">Нет данных</span><br />
+												Цвет кузова: <span class="red">Black</span><br />
+												Цвет салона: <span class="red">Tan</span><br />
+												Стикер: <span class="gray">Нет данных</span><br />
+												VIN: <span class="red">WDDDJ72XX9A142631</span><br />
+												Кузов: <span class="red">Седан</span><br />
+												Дверей: <span class="red">4</span><br />
+												Вид: <span class="red">Легковой автомобиль</span></p>
+											</td>
+											<td class="a_i_right">
+												<h4 class="top">Комплектация</h4>
+
+												<ul>
+													<li>Air Bag - Side Curtain	</li>
+													<li>Кондиционер</li>	
+													<li>Airbags</li>
+													<li>Легкосплавные диски</li>	
+													<li>Antilock Brakes</li>	
+													<li>Child Seat Anchors</li>
+													<li>Круиз-контроль	</li>
+													<li>Dual Climate Control	</li>
+													<li>DVD</li>
+													<li>GPS</li>	
+													<li>Подогрев сидений</li>	
+													<li>Power Brakes</li>
+													<li>Power Door Locks</li>
+													<li>Зеркала с электроприводом</li>	
+													<li>Элетрорегулировка сидений</li>
+													<li>Усилитель рулевого управления</li>
+													<li>Электрические стеклоподъемники	Rear Window Defroster</li>
+													<li>Tilt/Telescope Wheel</li>	
+													<li>Тонированные стекла</li>
+												</ul>
+												
+												<h4>Комплектация</h4>
+
+												<ul>
+													<li>Air Bag - Side Curtain	</li>
+													<li>Кондиционер</li>	
+													<li>Airbags</li>
+													<li>Легкосплавные диски</li>	
+													<li>Antilock Brakes</li>	
+													<li>Child Seat Anchors</li>
+													<li>Круиз-контроль	</li>
+													<li>Dual Climate Control	</li>
+													<li>DVD</li>
+													<li>GPS</li>	
+													<li>Подогрев сидений</li>	
+													<li>Power Brakes</li>
+													<li>Power Door Locks</li>
+													<li>Зеркала с электроприводом</li>	
+													<li>Элетрорегулировка сидений</li>
+													<li>Усилитель рулевого управления</li>
+													<li>Электрические стеклоподъемники	Rear Window Defroster</li>
+													<li>Tilt/Telescope Wheel</li>	
+													<li>Тонированные стекла</li>
+												</ul>
+											</td>
+										</tr>
+									</table>
+								</div>									
+							</div>
+							</div>
+							<!-- /Скроллинг описания 3 -->
+						</div>
+						<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+					</div>
+					<!-- /Универсальный блок -->
+					
+				</div>
+				<!-- /Информация об авто -->
+				
+				<!-- Блок с движущимися элементами -->
+				<div class="move_block">
+					<div class="m_b_l"><div class="m_b_r">
+						<div class="m_b_c">
+							<div class="move-obj">
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_01.png" width="111" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_02.png" width="82" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_03.png" width="35" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_04.png" width="77" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_05.png" width="74" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_06.png" width="76" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_01.png" width="111" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_02.png" width="82" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_03.png" width="35" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_04.png" width="77" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_05.png" width="74" height="130" alt="" />
+									</span></span>
+								</a>
+								<a class="m_item" href="#">
+									<span class="a_n">Samsung HDC</span><b>$ 45</b>
+									<span class="a_t"><span class="a_b">
+										<img src="images/home/move_item_06.png" width="76" height="130" alt="" />
+									</span></span>
+								</a>
+							</div>
+						</div>
+						<a class="arrow_l"><img src="img/move_block/arrow_l.gif" alt="<" /></a>
+						<a class="arrow_r"><img src="img/move_block/arrow_r.gif" alt=">" /></a>
+					</div></div>
+				</div>
+				<!-- /Блок с движущимися элементами -->
+				
+			</div>
+			<!-- /Центральный столбец -->
+			
+			<!-- Левый столбец -->
+			<div id="left-frame">
+				<!-- Меню слева -->
+				<ul id="left-menu">
+					<li><div><a href="#"><span>Аукционы</span></a></div></li>
+					<li><div><a href="#"><span>Copart</span></a></div></li>
+					<li><div><a href="#"><span>Manheim</span></a></div></li>
+					<li><div><a href="#"><span>Salvage direct</span></a></div></li>
+					<li><div><a href="#"><span>Ebay motors</span></a></div></li>
+					<li><div><a href="#"><span>Autotrader</span></a></div></li>
+					<li><div><a href="#"><span>Cars</span></a></div></li>
+					<li><div><a href="#"><span>Покупка лодок</span></a></div></li>
+					<li><div><a href="#"><span>Покупка мотоциклов</span></a></div></li>
+					<li><div><a href="#"><span>Вопросы и ответы</span></a></div></li>
+				</ul>
+				<!-- /Меню слева -->
+				
+				<!-- Универсальный блок -->
+				<div class="u_block">
+					<div class="u_block-cont">
+						<div class="h3">Курсы валют</div>
+						
+						<!-- Курсы валют -->
+						<ul class="rate">
+							<li><a href="#">USD/RUS</a><b class="up">48.26</b></li>
+							<li><a href="#">USD/EUR</a><b class="down">1.45</b></li>
+							<li><a href="#">EUR/USD</a><b class="down">0.65</b></li>
+							<li><a href="#">EUR/BLR</a><b class="up">3650</b></li>
+						</ul>
+						<!-- /Курсы валют -->
+						
+					</div>
+					<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+				</div>
+				<!-- /Универсальный блок -->
+				
+				<!-- Универсальный блок -->
+				<div class="u_block">
+					<div class="u_block-cont">
+						<div class="h3">Наши партнеры</div>
+						
+						<!-- Партнеры -->
+						<div class="partner">
+							<a href="#" title="Toyota"><img src="img/partner/partner_01.jpg" width="73" height="59" alt="Toyota" /></a>
+							<a href="#" title="Parex leasing"><img src="img/partner/partner_02.jpg" width="72" height="65" alt="Parex leasing" /></a>
+							<a class="p7" href="#" title="BBA"><img src="img/partner/partner_03.jpg" width="57" height="55" alt="BBA" /></a>
+							<a class="p7" href="#" title="БТА Банк"><img src="img/partner/partner_04.jpg" width="85" height="36" alt="БТА Банк" /></a>
+						</div>
+						<!-- Партнеры -->
+						
+					</div>
+					<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+				</div>
+				<!-- /Универсальный блок -->
+				
+			</div>
+			<!-- Левый столбец -->
+			
+		</div>
+		<!-- /Основная часть страницы -->
+		
+		<!-- Шапка сайта -->
+		<div id="head">
+			<!-- Языки -->
+				<div class="languages">
+					<a href="#">LT</a><a href="#">EN</a><a class="act" href="#">RU</a>
+				</div>
+			<!-- Языки -->
+		</div>
+		<!-- /Шапка сайта -->
+	
+		<!-- Меню сайта -->
+		<div id="menu">
+			<div id="menu_l">
+				<div id="menu_r">
+					<!-- Меню навигации -->
+					<ul id="navig">
+						<li><a href="#">Автомобильные аукционы</a></li>
+						<li><a href="#">Поиск авто</a></li>
+						<li><a href="#">Заказ авто</a></li>
+						<li><a href="#">Форум</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">О нас</a></li>
+					</ul>
+					<!-- /Меню навигации -->
+					<!-- Меню управления -->
+					<ul id="board">
+						<li><a href="#">Вход</a></li>
+					</ul>
+					<!-- /Меню управления -->
+				</div>
+			</div>
+		</div>
+		<!-- /Меню сайта -->
+		
+		<!-- Низ страницы -->
+		<div id="footer">
+			<div id="footer_l">
+				<div id="footer_r">
+					<div class="site_name">&copy;2009 &laquo;<a href="#">Automixs</a>&raquo;</div>
+					
+					<!-- Меню внизу сайта -->
+					<div class="footer_menu">
+						<ul>
+							<li><a href="#">Автомобильные аукционы</a></li>
+							<li><a href="#">Поиск авто</a></li>
+							<li><a href="#">Заказ авто</a></li>
+							<li><a href="#">Форум</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">О нас</a></li>
+						</ul>
+					</div>
+					<!-- /Меню внизу сайта -->
+					
+				</div>
+			</div>
+		</div>
+		<!-- /Низ страницы -->
+		
+	</div>
+</div>
+<!-- /Контейнер для сайта -->
+
+</body>
+</html>

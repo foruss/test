@@ -1,0 +1,85 @@
+#lang_selector {
+	position: absolute;
+	margin-left: 100%;
+	left: -7em;
+	z-index: 100;
+}
+
+#lang_selector #lang_select {
+	position: relative;
+	width: 7em;
+}
+
+#lang_selector #lang_select .c {
+	border: 1px solid #c2c1c1;
+	background-color: white;
+}
+
+#lang_selector #lang_select ul,
+#lang_selector #lang_select li {
+	margin: 0;
+	padding: 0;
+}
+
+#lang_selector #lang_select ul {
+	padding-bottom: 0.5em;
+}
+
+#lang_selector #lang_select li {
+	font-size: 0.8em;
+	//width: 100%;
+	position: relative;
+	margin-bottom: 0.3em;
+}
+
+#lang_selector #lang_select li a,
+#lang_selector #lang_select li.label,
+#lang_selector #lang_select li.selected {
+	display: block;
+	padding: 0.1em 18px 0.15em;
+}
+
+#lang_selector #lang_select li a:hover,
+#lang_selector #lang_select li a:visited:hover {
+	background-color: #f2f2f2;
+}
+
+
+#lang_selector #lang_select li.label {
+	font-size: 0.8em;
+	margin-bottom: 0.5em;
+}
+
+#lang_selector #lang_select li.label span {
+	display: inline;
+	padding: 0;
+	font-weight: bold;
+}
+
+#lang_selector #lang_select li.label span i {
+	background: url('../i/select_label.gif') 0 0 no-repeat;
+	position: absolute;
+	width: 6px;
+	height: 5px;
+	overflow: hidden;
+	z-index: 1;
+	margin: 0.35em 0 0 5px;
+}
+
+#lang_selector #lang_select.hidden {
+	display: block;
+}
+
+#lang_selector #lang_select.hidden .c {
+	background: transparent;
+	border-width: 0;
+	padding: 1px;
+}
+
+#lang_selector #lang_select.hidden li {
+	display: none;
+}
+
+#lang_selector #lang_select.hidden li.label {
+	display: block;
+}

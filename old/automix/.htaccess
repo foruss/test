@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^automix\.us$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.automix\.us$
+RewriteRule ^/?$ "http\:\/\/automixs\.com\/" [R=301,L]
+

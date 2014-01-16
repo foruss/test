@@ -1,0 +1,16 @@
+RewriteEngine on
+# Force English
+# for http://www.website.com/
+#RewriteRule ^$ index.php?lang=en
+
+# English
+# for http://www.website.com/EN/
+#RewriteRule ^EN/?$ index.php?lang=en
+
+# Other Languages
+# for http://www.website.com/DE/ etc
+#RewriteRule ^(de|es)/?$ $1/index.php?lang=$1
+
+
+RewriteRule    ^(en|de|es|EN|DE|ES)/(.*) $2?lang=$1 [NC,L,QSA]
+RewriteRule    ^(en|de|es|EN|DE|ES)$ http://www.automixs.com/fu/$1/index.php [R=301,L]

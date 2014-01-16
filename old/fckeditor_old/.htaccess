@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^([A-Za-z-]+).html$ index.php?psl=$1

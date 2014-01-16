@@ -1,0 +1,13 @@
+[01-Feb-2010 05:03:19] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home/linas/public_html/currency/currency.php on line 77
+[01-Feb-2010 05:05:14] PHP Parse error:  syntax error, unexpected ',' in /home/linas/public_html/currency/currency.php on line 147
+[01-Feb-2010 05:05:43] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 174
+[01-Feb-2010 05:05:43] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 177
+[01-Feb-2010 05:05:43] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 177
+[01-Feb-2010 05:16:35] PHP Parse error:  syntax error, unexpected T_IF, expecting ',' or ';' in /home/linas/public_html/currency/currency.php on line 163
+[01-Feb-2010 05:37:11] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 189
+[01-Feb-2010 05:37:35] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 189
+[01-Feb-2010 05:39:35] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 193
+[01-Feb-2010 05:40:29] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 194
+[01-Feb-2010 05:40:32] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 194
+[01-Feb-2010 05:40:56] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 194
+[01-Feb-2010 05:42:32] PHP Warning:  Division by zero in /home/linas/public_html/currency/currency.php on line 194

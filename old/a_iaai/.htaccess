@@ -1,0 +1,194 @@
+RewriteEngine on
+AddDefaultCharset UTF-8
+php_flag register_globals on
+php_flag always_populate_raw_post_data on
+RewriteRule ^$                             app/main.php
+
+RewriteRule ^moto/(.*)/$               				app/moto.php?mode=$1
+RewriteRule ^moto1/(.*)/(.*)/$               		app/moto.php?mode=$1&id=$2
+RewriteRule ^moto2/(.*)/(.*)/(.*)/$                 app/moto.php?mode=$1&id1=$2&id2=$3
+RewriteRule ^moto3/(.*)/(.*)/$                		 app/moto.php?mode=list1&brand=$1&id=$2
+
+RewriteRule ^boat/(.*)/$               				app/boat.php?mode=$1
+RewriteRule ^boat1/(.*)/(.*)/$               		app/boat.php?mode=$1&id=$2
+RewriteRule ^boat2/(.*)/(.*)/(.*)/$                 app/boat.php?mode=$1&id1=$2&id2=$3
+RewriteRule ^boat3/(.*)/(.*)/$                		 app/boat.php?mode=list1&brand=$1&id=$2
+
+RewriteRule ^order_auto/(.*)/$               	app/ordercar.php?cid=$1
+RewriteRule ^order_moto/(.*)/$               	app/ordercar.php?cid=$1&mode=moto
+RewriteRule ^order_boat/(.*)/$               	app/ordercar.php?cid=$1&mode=boat
+RewriteRule ^add_partner/$               		app/all_partn.php?mode=add
+RewriteRule ^add_partn_subm/$               	app/all_partn.php?mode=add_subm
+RewriteRule ^edit_partn/(.*)/$              	app/all_partn.php?mode=edit&id=$1
+RewriteRule ^edit_partn_subm/(.*)/$             app/all_partn.php?mode=edit_subm&id=$1
+RewriteRule ^del_partn/(.*)/$              	 app/all_partn.php?mode=del&id=$1
+RewriteRule ^spisok_partners/$               app/all_partn.php?mode=spisok
+
+RewriteRule ^spisok_navigation/$               app/all_navig.php?mode=spisok
+RewriteRule ^edit_nav/(.*)/$               		app/all_navig.php?mode=edit&id=$1
+RewriteRule ^edit_navig_subm/(.*)/$               		app/all_navig.php?mode=edit_subm&id=$1
+
+RewriteRule ^print/(.*)/$               app/print.php?id=$1
+RewriteRule ^print1/(.*)/$               app/print1.php?id=$1
+RewriteRule ^tam_sbor/$			   			app/tam_sbor.php
+RewriteRule ^show_frend/(.*)/$			   app/show_frend.php?id=$1
+RewriteRule ^show_frend1/(.*)/$			   app/show_frend1.php?id=$1
+RewriteRule ^my_json.php$			   app/json1.php
+RewriteRule ^(.*)_text.html$			   app/page.php?url=$1
+RewriteRule ^order_car/$						app/ordercar.php
+RewriteRule ^ajax.php                      app/ajax.php
+RewriteRule ^feedback/$                      app/feedback.php
+## Pages
+RewriteRule ^restore/$                        app/restore.php?mode=form
+RewriteRule ^restore/(.*)/(.*)/$      	    app/restore.php?mode=changepass&user=$1&rand=$2
+RewriteRule ^restore/(.*)/$                  app/restore.php?mode=$1
+RewriteRule ^order/bid/$			app/order.php
+RewriteRule ^adminpage/(.*)/page-(.*)/$ 				app/admin.php?mode=$1&p=$2
+RewriteRule ^adminpage/(.*)/(.*)/$ 				app/admin.php?mode=$1&id=$2
+RewriteRule ^adminpage/(.*)/$ 					app/admin.php?mode=$1
+RewriteRule ^adminpage/$ 						app/admin.php	
+
+##
+RewriteRule ^auctions/showlot/(.*)/$				app/auctions_showlot.php?id=$1
+RewriteRule ^auctions/showall/(.*)/$			 app/auctions_showall.php?id=$1
+
+##RewriteRule ^(.*)/dealersadmin/(.*)/(.*)/$	app/dealersadmin.php?lang=$1&mode=$2&id=$3
+RewriteRule ^(.*)/dealersadmin/(.*)/$		app/dealersadmin.php?lang=ru&mode=$2
+
+RewriteRule ^register/$                     app/register.php
+RewriteRule ^settings/$                     app/settings.php
+RewriteRule ^getcity/                       app/getcity.php
+
+RewriteRule ^calc/                       app/calc.php
+
+RewriteRule ^news/$                          app/news.php?category=news
+RewriteRule ^news/title/(.*)/$              app/news.php?title=$1
+RewriteRule ^news/(.*)/page-(.*)/$         app/news.php?category=news&p=$2
+RewriteRule ^news/page-(.*)/$               app/news.php?p=$1
+RewriteRule ^news/(.*)/$                    app/news.php?category=$1
+
+RewriteRule ^page/(.*)/$                    app/page.php?p=$1
+
+RewriteRule ^about/$                         app/page.php?p=10
+RewriteRule ^info/$                          app/page.php?p=11
+RewriteRule ^partners/$                      app/page.php?p=12
+RewriteRule ^consultation/$                        app/page.php?p=13
+RewriteRule ^tracking/$                         app/page.php?p=14
+RewriteRule ^spareparts/$                     app/page.php?p=15
+RewriteRule ^repairedauto/$                     app/page.php?p=18
+RewriteRule ^onlinetrade/$                    app/page.php?p=19
+RewriteRule ^newauto/$                        app/page.php?p=21
+##RewriteRule ^contact/$                       app/page.php?p=24
+
+RewriteRule ^contact/$                       app/contact.php
+
+RewriteRule ^press/$                          app/press.php
+RewriteRule ^press/title/(.*)/$              app/press.php?title=$1
+RewriteRule ^press/(.*)/page-(.*)/$         app/press.php?category=$1&p=$2
+RewriteRule ^press/page-(.*)/$               app/press.php?p=$1
+RewriteRule ^press/(.*)/$                    app/press.php?category=$1
+
+RewriteRule ^(.*)/register/$                 app/register.php?lang=$1
+RewriteRule ^register/ckecklogin/$            app/register.php?mode=ckecklogin
+RewriteRule ^kcaptcha/(.*)$                  /lib/kcaptcha/index.php
+
+RewriteRule ^evaluate/$                         app/evaluate.php
+
+RewriteRule ^auto/$                          app/auto.php
+RewriteRule ^auto/show/(.*)/$               app/auto.php?mode=show&id=$1
+RewriteRule ^auto/list/(.*)/$               app/auto.php?mode=list&page=$1
+RewriteRule ^auto/price/(.*)/$               app/auto.php?mode=price&page=$1
+RewriteRule ^auto/new/(.*)/$               app/auto.php?mode=new&page=$1
+RewriteRule ^auto/salone/(.*)/$             app/auto.php?mode=salone&page=$1
+RewriteRule ^auto/saloneprint/(.*)/         app/auto.php?mode=saloneprint&page=$1
+RewriteRule ^auto/inway/(.*)/$              app/auto.php?mode=inway&page=$1
+RewriteRule ^auto/sendtest/(.*)/$              app/auto.php?mode=sendtest&id=$1
+RewriteRule ^auto/hot/(.*)/$                app/auto.php?mode=hot&page=$1
+RewriteRule ^auto/photo/(.*)/$                app/auto.php?mode=photo&id=$1
+RewriteRule ^auto/(.*)/$                    app/auto.php?mode=$1
+
+RewriteRule ^products/$                          app/products.php
+RewriteRule ^products/show/(.*)/$               app/products.php?mode=show&id=$1
+RewriteRule ^products/addproduct/(.*)/$               app/products.php?mode=show&id=$1
+RewriteRule ^products/list/(.*)/$               app/products.php?mode=list&page=$1
+RewriteRule ^products/(.*)/$                    app/products.php?mode=$1
+
+RewriteRule ^faq/admin.php                   faq/admin.php
+RewriteRule ^faq/admin.php?page=(.*)        faq/admin.php?page=$1
+
+RewriteRule ^faq/$                           app/faq.php
+RewriteRule ^faq/(.*)/$                     app/faq.php?page=$1
+RewriteRule ^faq/gq/$                        app/faq.php?mode=gq
+RewriteRule ^faq/gq/(.*)/$                  app/faq.php?mode=gq&page=$1
+RewriteRule ^faq/aq/$                        app/faq.php?mode=aq
+RewriteRule ^faq/aq/(.*)/$                  app/faq.php?mode=aq&page=$1
+RewriteRule ^user/$                          app/user.php
+RewriteRule ^user/info/$                     app/user.php?mode=info
+RewriteRule ^user/edit/$                     app/user.php?mode=edit                 
+
+
+
+RewriteRule ^publication/(.*)/$             app/publications.php?category=$1
+
+RewriteRule ^offer/(.*)/$                   app/offer.php?mode=$1
+
+
+
+
+
+RewriteRule ^office/getonaprovalcars/$       app/office.php?action=getonaprovalcars
+RewriteRule ^office/$                        app/office.php
+
+RewriteRule ^office/addmodel/$               app/office.php?action=addmodel
+RewriteRule ^office/savemodel/$               app/office.php?action=savemodel
+
+RewriteRule ^office/faq/$                     app/office.php?action=faqlist
+RewriteRule ^office/faq/(.*)/$               app/office.php?action=faqlist&page=$1
+RewriteRule ^office/faqedit/(.*)/$           app/office.php?action=faqedit&id=$1
+RewriteRule ^office/faqdelete/(.*)/$         app/office.php?action=faqdelete&id=$1
+RewriteRule ^office/faqapprove/(.*)/$         app/office.php?action=faqapprove&id=$1
+RewriteRule ^office/faqdisapprove/(.*)/$      app/office.php?action=faqdisapprove&id=$1
+RewriteRule ^office/faqsave/$                 app/office.php?action=faqsave
+RewriteRule ^office/faqdelete/(.*)/$         app/office.php?action=faqdelete&id=$1
+
+RewriteRule ^office/autoedit/(.*)/$         app/office.php?action=autoedit&id=$1
+RewriteRule ^office/autosave/$               app/office.php?action=autosave
+RewriteRule ^office/autodelete/(.*)/$       app/office.php?action=autodelete&id=$1
+RewriteRule ^office/autodelete1/$       app/office.php?action=autodelete1
+RewriteRule ^office/autoprod1/$       app/office.php?action=autoprod1
+RewriteRule ^office/autoprod2/$       app/office.php?action=autoprod2
+
+RewriteRule ^office/productedit/(.*)/$         app/office.php?action=productedit&id=$1
+RewriteRule ^office/productsave/$               app/office.php?action=productsave
+RewriteRule ^office/productdelete/(.*)/$       app/office.php?action=productdelete&id=$1
+RewriteRule ^office/productlist/$               app/office.php?action=productlist
+
+RewriteRule ^office/autoappr/(.*)/$         app/office.php?action=autoappr&id=$1
+RewriteRule ^office/noticedelete/(.*)/$     app/office.php?action=noticedelete&id=$1
+RewriteRule ^office/noticeedit/(.*)/$       app/office.php?action=noticeedit&id=$1
+RewriteRule ^office/noticeeditprocess/$      app/office.php?action=noticeeditprocess
+RewriteRule ^office/tender/$                 app/office.php?action=tender
+RewriteRule ^office/tenderdelete/(.*)/$     app/office.php?action=tenderdelete&id=$1
+RewriteRule ^office/tenderedit/(.*)/$       app/office.php?action=tenderedit&id=$1
+RewriteRule ^office/tendereditprocess/$      app/office.php?action=tendereditprocess
+RewriteRule ^office/catalog/$                app/office.php?action=catalog
+RewriteRule ^office/catalogdelete/(.*)/$    app/office.php?action=catalogdelete&id=$1
+RewriteRule ^office/catalogedit/(.*)/$      app/office.php?action=catalogedit&id=$1
+RewriteRule ^office/catalogeditprocess/$     app/office.php?action=catalogeditprocess
+RewriteRule ^office/siteadd/$                app/office.php?action=siteadd
+RewriteRule ^office/siteaddprocess/$         app/office.php?action=siteaddprocess
+RewriteRule ^office/sites/$                  app/office.php?action=sites
+RewriteRule ^office/sitedelete/(.*)/$       app/office.php?action=sitedelete&id=$1
+RewriteRule ^office/siteedit/(.*)/$         app/office.php?action=siteedit&id=$1
+RewriteRule ^office/siteeditprocess/$        app/office.php?action=siteeditprocess
+
+
+RewriteRule ^logout/$                        app/logout.php
+
+php_value magic_quotes_gpc 0
+
+
+
+ErrorDocument 403 /app/page.php?url=403
+ErrorDocument 404 /app/page.php?url=404
+

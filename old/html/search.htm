@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>automix || Поиск техники</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="author" content="Rebulus" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="js/jquery.pngFix.js"></script>
+<script type="text/javascript" src="js/srSelect.js"></script>
+<script type="text/javascript" src="js/srCheckbox.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	var widthDiv = ($('a.m_item').eq(0).width()/1)*($('a.m_item').length);
+	$('.move-obj').eq(0).css('width',widthDiv + 'px');
+	var widthThreeDivRight = 0;
+	var widthThreeDivLeft = ($('a.m_item').eq(0).width()/1)*($('a.m_item').length-6)
+	var flag = true;
+	
+	$("a.arrow_r").click(function(){
+		if(flag == true)
+			if(widthThreeDivLeft > Math.abs($('.move-obj').eq(0).css('marginLeft').substring(0,$('.move-obj').eq(0).css('marginLeft').indexOf('px'))))
+				{
+					flag = false;
+					$('.move-obj').eq(0).animate({'marginLeft':"-=122px"},400, "swing", function(){
+						flag = true;
+					});
+				};
+		return false;
+	});
+	$("a.arrow_l").click(function(){
+		if(flag == true)
+			if(widthThreeDivRight > $('.move-obj').eq(0).css('marginLeft').substring(0,$('.move-obj').eq(0).css('marginLeft').indexOf('px'))) {
+				flag = false;
+				$('.move-obj').eq(0).animate({marginLeft:"+=122px"},400,function(){
+					flag = true;
+				});
+			};
+		return false;
+	});
+});
+//-->
+</script>
+</head>
+
+<body>
+
+<!-- Контейнер для сайта -->
+<div id="wrap">
+	<div id="wrap_c">
+	
+		<!-- Основная часть страницы -->
+		<div id="basis">
+			
+			<!-- Центральный столбец -->
+			<div id="center-frame">
+				
+				<!-- Универсальный блок -->
+				<div class="u_block left">
+					<div class="u_block-cont">
+					
+						<!-- Поиск -->
+						<div class="search">
+							<div class="h2">Поиск авто:</div>
+							
+							<table class="fast_autos" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td><a href="#">Alfa Romeo</a> (1)</td>
+									<td><a href="#">Audi</a> (23)</td>
+									<td><a href="#">BMW</a> (41)</td>
+									<td><a href="#">Chrysler</a> (8)</td>
+									<td><a href="#">Citroen</a> (5)</td>
+									<td><a href="#">DODGE</a> (8)</td>
+									<td><a href="#">Fiat</a> (3)</td>
+									<td><a href="#">Ford</a> (10)</td>
+									<td><a href="#">Honda</a> (12)</td>
+									<td><a href="#">Hyundai</a> (6)</td>
+								</tr>
+								<tr>
+									<td><a href="#">Infinity</a> (1)</td>
+									<td><a href="#">Jeep</a> (2)</td>
+									<td><a href="#">KIA</a> (1)</td>
+									<td><a href="#">Lexus</a></a> (13)</td>
+									<td><a href="#">Mazda</a> (16)</td>
+									<td><a href="#">Mercedes</a> (26)</td>
+									<td><a href="#">Mitsubishi</a> (7)</td>
+									<td><a href="#">Nissan</a> (10)</td>
+									<td><a href="#">Opel</a> (14)</td>
+									<td><a href="#">Hyundai</a> (6)</td>
+								</tr>
+								<tr>
+									<td><a href="#">Peugeot</a> (5)</td>
+									<td><a href="#">Renault</a> (7)</td>
+									<td><a href="#">Rover</a> (2)</td>
+									<td><a href="#">Skoda</a> (1)</td>
+									<td><a href="#">Subaru</a> (6)</td>
+									<td><a href="#">Suzuki</a> (2)</td>
+									<td><a href="#">Toyota</a> (19)</td>
+									<td><a href="#">Volkswagen</a> (21)</td>
+									<td><a href="#">Volvo</a> (8)</td>
+								</tr>
+							</table>
+						</div>
+						<div class="line"></div>
+						<div class="search">
+							<form id="s-light-form" action="#" method="post" enctype="application/x-www-form-urlencoded">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td>Марка<span class="red">*</span></td>
+										<td>Модель<span class="red">*</span></td>
+										<td>Год выпуска с<span class="red">*</span></td>
+										<td>Год выпуска по<span class="red">*</span></td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+											<select name="mark">
+												<option selected="selected" value="0">&nbsp;</option>
+												<option value="1">Марка 1</option>
+												<option value="2">Марка 2</option>
+												<option value="3">Марка 3</option>
+											</select>
+											</div>
+										</td>
+										<td>
+											<select name="model">
+												<option selected="selected" value="0">&nbsp;</option>
+												<option value="1">Модель 1</option>
+												<option value="2">Модель 2</option>
+												<option value="3">Модель 3</option>
+											</select>
+										</td>
+										<td>
+											<select name="with_year">
+												<option selected="selected" value="0">&nbsp;</option>
+												<option value="1">1996</option>
+												<option value="2">1995</option>
+												<option value="3">1994</option>
+											</select>
+										</td>
+										<td>
+											<select name="to_year">
+												<option selected="selected" value="0">&nbsp;</option>
+												<option value="1">2000</option>
+												<option value="2">1999</option>
+												<option value="3">1998</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>Пробег</td>
+										<td>Цвет</td>
+										<td>Трансмиссия</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>
+											<select name="race">
+												<option selected="selected" value="0">&nbsp;</option>
+												<option value="1">10000</option>
+												<option value="2">15000</option>
+												<option value="3">17000</option>
+											</select>
+										</td>
+										<td>
+											<select name="color">
+												<option selected="selected" value="0">&nbsp;</option>
+												<option value="1">Красный</option>
+												<option value="2">Серый</option>
+												<option value="3">Синий</option>
+											</select>
+										</td>
+										<td>
+											<select name="race">
+												<option selected="selected" value="0">&nbsp;</option>
+												<option value="1">10000</option>
+												<option value="2">15000</option>
+												<option value="3">17000</option>
+											</select>
+										</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										
+										<td><div class="checkbox"><input type="checkbox" name="with_foto" /><label for="with_foto">только с фото</label></div></td>
+										<td colspan="2">&nbsp;</td>
+										<td>
+											
+											<div class="divRight">
+												<div class="button">
+													<div><div>
+														<input type="submit" name="submitSearch" value="Найти" />
+													</div></div>
+												</div>
+											</div>
+											
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+						<!-- /Поиск -->
+						
+					</div>
+					<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+				</div>
+				<!-- /Универсальный блок -->
+				
+				<!-- Контент центральной части -->
+				<div id="center-frame-content">
+					
+					<!-- Результаты поиска -->
+					<div class="search_result">
+						<div class="s_r_item">
+							<a class="s_r_auto" href="#"><img src="images/search/search_item_01.jpg" width="148" height="98" alt="" /></a>
+							<div class="s_r_desc">
+								<a href="#">Lexus ES300, 2001</a>
+								
+								<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>Пробег:</td><td><div>13 000 miles</div></td>
+								</tr>
+								<tr>
+									<td>КП:</td><td><div>Автоматическая</div></td>
+								</tr>
+								<tr>
+									<td>ЦВЕТ:</td><td><div>бордовый перламутр</div></td>
+								</tr>
+								<tr>
+									<td>Stock#:</td><td><div>002142</div></td>
+								</tr>
+								</table>
+							</div>
+							<div class="s_r_cost">
+								<div class="summ">$ 25 000</div>
+								<form action="#" method="post" enctype="application/x-www-form-urlencoded">
+									<div class="checkbox"><input type="checkbox" name="with_foto"/><label for="with_foto">наблюдать</label></div>
+								</form>
+							</div>
+						</div>
+						<div class="s_r_item">
+							<a class="s_r_auto" href="#"><img src="images/search/search_item_01.jpg" width="148" height="98" alt="" /></a>
+							<div class="s_r_desc">
+								<a href="#">Lexus ES300, 2001</a>
+								
+								<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>Пробег:</td><td><div>13 000 miles</div></td>
+								</tr>
+								<tr>
+									<td>КП:</td><td><div>Автоматическая</div></td>
+								</tr>
+								<tr>
+									<td>ЦВЕТ:</td><td><div>бордовый перламутр</div></td>
+								</tr>
+								<tr>
+									<td>Stock#:</td><td><div>002142</div></td>
+								</tr>
+								</table>
+							</div>
+							<div class="s_r_cost">
+								<div class="summ">$ 25 000</div>
+							</div>
+						</div>
+						<div class="s_r_item">
+							<a class="s_r_auto" href="#"><img src="images/search/search_item_01.jpg" width="148" height="98" alt="" /></a>
+							<div class="s_r_desc">
+								<a href="#">Lexus ES300, 2001</a>
+								
+								<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>Пробег:</td><td><div>13 000 miles</div></td>
+								</tr>
+								<tr>
+									<td>КП:</td><td><div>Автоматическая</div></td>
+								</tr>
+								<tr>
+									<td>ЦВЕТ:</td><td><div>бордовый перламутр</div></td>
+								</tr>
+								<tr>
+									<td>Stock#:</td><td><div>002142</div></td>
+								</tr>
+								</table>
+							</div>
+							<div class="s_r_cost">
+								<div class="summ">$ 25 000</div>
+							</div>
+						</div>
+						<div class="s_r_item">
+							<a class="s_r_auto" href="#"><img src="images/search/search_item_01.jpg" width="148" height="98" alt="" /></a>
+							<div class="s_r_desc">
+								<a href="#">Lexus ES300, 2001</a>
+								
+								<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td>Пробег:</td><td><div>13 000 miles</div></td>
+								</tr>
+								<tr>
+									<td>КП:</td><td><div>Автоматическая</div></td>
+								</tr>
+								<tr>
+									<td>ЦВЕТ:</td><td><div>бордовый перламутр</div></td>
+								</tr>
+								<tr>
+									<td>Stock#:</td><td><div>002142</div></td>
+								</tr>
+								</table>
+							</div>
+							<div class="s_r_cost">
+								<div class="summ">$ 25 000</div>
+							</div>
+						</div>
+						
+						<div class="page">
+							Страницы:<a href="#">1</a><a class="act" href="#">2</a><a href="#">3</a>
+						</div>
+						
+					</div>
+					<!-- /Результаты поиска -->
+					
+				</div>
+				<!-- /Контент центральной части -->
+				
+			</div>
+			<!-- /Центральный столбец -->
+			
+			<!-- Левый столбец -->
+			<div id="left-frame">
+				<!-- Меню слева -->
+				<ul id="left-menu">
+					<li><div><a href="#"><span>Аукционы</span></a></div></li>
+					<li><div><a href="#"><span>Copart</span></a></div></li>
+					<li><div><a href="#"><span>Manheim</span></a></div></li>
+					<li><div><a href="#"><span>Salvage direct</span></a></div></li>
+					<li><div><a href="#"><span>Ebay motors</span></a></div></li>
+					<li><div><a href="#"><span>Autotrader</span></a></div></li>
+					<li><div><a href="#"><span>Cars</span></a></div></li>
+					<li><div><a href="#"><span>Покупка лодок</span></a></div></li>
+					<li><div><a href="#"><span>Покупка мотоциклов</span></a></div></li>
+					<li><div><a href="#"><span>Вопросы и ответы</span></a></div></li>
+				</ul>
+				<!-- /Меню слева -->
+				
+				<!-- Универсальный блок -->
+				<div class="u_block">
+					<div class="u_block-cont">
+						<div class="h3">Курсы валют</div>
+						
+						<!-- Курсы валют -->
+						<ul class="rate">
+							<li><a href="#">USD/RUS</a><b class="up">48.26</b></li>
+							<li><a href="#">USD/EUR</a><b class="down">1.45</b></li>
+							<li><a href="#">EUR/USD</a><b class="down">0.65</b></li>
+							<li><a href="#">EUR/BLR</a><b class="up">3650</b></li>
+						</ul>
+						<!-- /Курсы валют -->
+						
+					</div>
+					<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+				</div>
+				<!-- /Универсальный блок -->
+				
+				<!-- Универсальный блок -->
+				<div class="u_block">
+					<div class="u_block-cont">
+						<div class="h3">Наши партнеры</div>
+						
+						<!-- Партнеры -->
+						<div class="partner">
+							<a href="#" title="Toyota"><img src="img/partner/partner_01.jpg" width="73" height="59" alt="Toyota" /></a>
+							<a href="#" title="Parex leasing"><img src="img/partner/partner_02.jpg" width="72" height="65" alt="Parex leasing" /></a>
+							<a class="p7" href="#" title="BBA"><img src="img/partner/partner_03.jpg" width="57" height="55" alt="BBA" /></a>
+							<a class="p7" href="#" title="БТА Банк"><img src="img/partner/partner_04.jpg" width="85" height="36" alt="БТА Банк" /></a>
+						</div>
+						<!-- Партнеры -->
+						
+					</div>
+					<div class="t_l"></div><div class="t_r"></div><div class="b_l"></div><div class="b_r"></div>
+				</div>
+				<!-- /Универсальный блок -->
+				
+			</div>
+			<!-- Левый столбец -->
+			
+		</div>
+		<!-- /Основная часть страницы -->
+		
+		<!-- Шапка сайта -->
+		<div id="head">
+			<!-- Языки -->
+				<div class="languages">
+					<a href="#">LT</a><a href="#">EN</a><a class="act" href="#">RU</a>
+				</div>
+			<!-- Языки -->
+		</div>
+		<!-- /Шапка сайта -->
+	
+		<!-- Меню сайта -->
+		<div id="menu">
+			<div id="menu_l">
+				<div id="menu_r">
+					<!-- Меню навигации -->
+					<ul id="navig">
+						<li><a href="#">Автомобильные аукционы</a></li>
+						<li><a href="#">Поиск авто</a></li>
+						<li><a href="#">Заказ авто</a></li>
+						<li><a href="#">Форум</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">О нас</a></li>
+					</ul>
+					<!-- /Меню навигации -->
+					<!-- Меню управления -->
+					<ul id="board">
+						<li><a href="#">Вход</a></li>
+					</ul>
+					<!-- /Меню управления -->
+				</div>
+			</div>
+		</div>
+		<!-- /Меню сайта -->
+		
+		<!-- Низ страницы -->
+		<div id="footer">
+			<div id="footer_l">
+				<div id="footer_r">
+					<div class="site_name">&copy;2009 &laquo;<a href="#">Automixs</a>&raquo;</div>
+					
+					<!-- Меню внизу сайта -->
+					<div class="footer_menu">
+						<ul>
+							<li><a href="#">Автомобильные аукционы</a></li>
+							<li><a href="#">Поиск авто</a></li>
+							<li><a href="#">Заказ авто</a></li>
+							<li><a href="#">Форум</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">О нас</a></li>
+						</ul>
+					</div>
+					<!-- /Меню внизу сайта -->
+					
+				</div>
+			</div>
+		</div>
+		<!-- /Низ страницы -->
+		
+	</div>
+</div>
+<!-- /Контейнер для сайта -->
+
+</body>
+</html>

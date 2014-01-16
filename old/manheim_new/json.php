@@ -1,0 +1,85 @@
+<?php
+include_once("config.php");
+function follow_location( $url )
+{
+    global $manheim_login;
+    $html_result = http_load( $url, null, null, $manheim_login );
+    $pattern = "#Location: ([^\\r\\n]+)#";
+    while ( $url_array = html_search( $pattern, $html_result ) )
+    {
+        $html_result = http_load( $url_array[1], null, null, $manheim_login );
+    }
+    return $html_result;
+}
+
+foreach ( $_REQUEST as $key => $value )
+{
+    $$key = $value;
+}
+$xml = true;
+$post = array();
+function get_all_params_as_string($search_param,$post){
+	
+	$tmp = html_search_all("#$search_param=([^&]*)#i",$post);
+	$string = '';	
+	foreach ($tmp as $v){
+		$string .= $search_param.'='.$v[1].'&';
+	}
+	return trim($string,'&');
+}
+switch ( $mode )
+{
+    case "states" :
+        $action = "getStates.do?region=".$region."&inventory=".$inventory;
+        break;
+    case "trims" :
+        $xml = false;
+        $action = "getTrims.do?inventory=&";
+        
+		
+       	$action .= get_all_params_as_string('make',$_SERVER["QUERY_STRING"]);
+       	$action .= '&';
+       	$action .= get_all_params_as_string('model',$_SERVER["QUERY_STRING"]);      
+        break;
+    case "models" :
+        $xml = false;
+        $action = "getModels.do?make=".$make."&inventory=".$inventory;
+        break;
+    case "year" :
+        $action = "getToYear.do?fromYear=".$fromYear;
+        break;
+    case "makes" :
+    	$xml = false;
+        $action = "getMakes.do";
+        $post['vehicleType'] = $inventory;
+        break;    
+    case "certifications" :
+        $action = "getCertifications.do?inventory=".$inventory;
+        break;
+    case "auctions" :
+        $action = "getAuctions.do?inventory=".$inventory;
+    break;
+    case "seller" :
+    	$action ='getSellers.do';    
+        
+    	$post = '';
+    	$post = preg_replace('#mode=[^&]*&#i','',$HTTP_RAW_POST_DATA);
+        $post= trim($post,'&');
+        $xml = false;
+}
+$url = "https://www.manheim.com/members/powersearch/".$action;
+header( "Pragma: no-cache" );
+header( "Cache-Control: no-store" );
+if ( $xml )
+{
+    header( "Content-Type: text/xml;charset=".$project_encoding );
+}
+else
+{
+    header( "Content-Type: text/json;charset=".$project_encoding );
+}
+$html_result = http_load( $url, "https://www.manheim.com/members/powersearch/", $_COOKIE, $manheim_login, $post, null, null, null, 0 );
+$html_result = preg_replace( "#\"label\": \"ALL\"#", "\"label\": \"Bce\"", $html_result );
+echo $html_result;
+exit( );
+?>

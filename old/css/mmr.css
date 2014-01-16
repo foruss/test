@@ -1,0 +1,69 @@
+/* External Style Sheet for Internet MMR */
+
+.title          {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #003366; font-weight: bold}
+.verText        {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #003366}
+.text           {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000}
+.textLeft       {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-align:left}
+.textCenter     {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-align:center}
+.textRight      {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-align:right}
+.header         {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; font-weight: bold}
+.headerSmall    {font-family: Arial, Helvetica, sans-serif; font-size: 9px;  color: #000000; text-align:center; width: 70px}
+.headerText     {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-decoration: underline; text-align:center; width: 70px}
+.headerTextPrint{font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-decoration: underline; text-align:right; width: 70px}
+.tableHead      {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF}
+.alert          {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; font-weight: bold; background-color: #FF0000;  text-align:center; border-style: solid; border-width: 1px; border-color: #000000}
+.red            {color: #CC0000}
+
+.reportTitle    {font-family: Arial, Helvetica, sans-serif; font-size: 22px; color: #000000; font-weight: bold; text-align: center}
+.reportHeader   {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; font-weight: bold}
+.reportText     {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000}
+.reportCopyRight{font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #525252}
+
+.textWhiteDflt  {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF}
+.textWhiteLeft  {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; text-align:left}
+.textWhiteCenter{font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; text-align:center}
+.textWhiteRight {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFF; text-align:right}
+
+.textWhite      {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #FFFFFE; font-weight: bold; text-align: center}
+.textBgGrey     {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #CCCCCC; background-color: #CCCCCC; width: 70px}
+.textBgWhite    {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; background-color: #FFFFFF; text-align: right; border-style: solid; border-width: 1px; border-color: #000000; width: 70px}
+.textBgYellow   {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; background-color: #FFFF00; text-align: right; border-style: solid; border-width: 1px; border-color: #000000}
+.textBgGreen    {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; background-color: #00FF00; text-align: right; border-style: solid; border-width: 1px; border-color: #000000}
+.textBgWhite70  {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; background-color: #FFFFFF; text-align: left;  border-style: solid; border-width: 1px; border-color: #000000; width: 70px}
+.textBgWhite150 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; background-color: #FFFFFF; text-align: left;  border-style: solid; border-width: 1px; border-color: #000000; width: 150px}
+
+.blackWidth70   {background-color: #000000; width: 70px}
+.blackWidth150  {background-color: #000000; width: 150px}
+
+.tabSelected    {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; font-weight: bold}
+.tabDeselected  {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #CCCCCC; font-weight: bold}
+
+.fields         {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; font-weight: bold; text-align: left;}
+.bottons        {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; font-weight: bold}
+
+
+.width32        {width: 280px; font-size: 12px; font-weight: bold}
+.width11        {width: 100px; font-size: 12px; font-weight: bold}
+.width10        {width: 95px;  font-size: 12px; font-weight: bold}
+.width3         {width: 50px;  font-size: 12px; font-weight: bold}
+
+.bodyLower      {background-color: #CCCCCC; margin-top: 0px; margin-left: 10px; marginwidth: 10px; marginheight:0px}
+.tp1s0w567      {background-color: #CCCCCC; padding:1px; border-spacing: 0px; width: 567px }
+.tp1s0bdw567    {background-color: #CCCCCC; padding:1px; border-spacing: 0px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; width: 567px }
+.tp1s0bdTw567   {background-color: #CCCCCC; padding:1px; border-spacing: 0px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 567px }
+.tp2s2bdTw567   {background-color: #CCCCCC; padding:2px; border-spacing: 2px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 567px }
+.tp2s1bdTw565   {background-color: #CCCCCC; padding:2px; border-spacing: 1px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 565px }
+.tp1s0bdTw543   {background-color: #CCCCCC; padding:1px; border-spacing: 0px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 543px }
+.tb0s0p1w543    {border: 0px; border-spacing: 0px; padding: 1px; width: 543px;}
+.tb0s2p2w543    {border: 0px; border-spacing: 2px; padding: 2px; width: 543px;}
+.tb0s3p1        {border: 0px; border-spacing: 3px; padding: 1px;}
+.tb0s2p2        {border: 0px; border-spacing: 2px; padding: 2px;}
+.tb0s2p0        {border: 0px; border-spacing: 2px; padding: 0px;}
+.tb0s5p0bdTw557 {border: 0px; border-spacing: 5px; padding: 0px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 557px }
+.tb0s5p0bdTw316 {border: 0px; border-spacing: 5px; padding: 0px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 316px }
+.tb0s5p0w306    {border: 0px; border-spacing: 5px; padding: 0px; width: 306px }
+.tb0s5p0bdTw238 {border: 0px; border-spacing: 5px; padding: 0px; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 236px }
+.tb0s5p0w208    {border: 0px; border-spacing: 5px; padding: 0px; width: 206px }
+
+.div1Tab567     {border: 0px; border-spacing: 0px; padding: 0px; width: 567px; margin-bottom: 0px }
+.div1TabLower   {background-color: #CCCCCC; padding:0px; border-spacing: 0px; border: 1px; margin: 0px}

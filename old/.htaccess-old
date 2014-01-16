@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteRule ^([A-Za-z-]+).html$ index.php?psl=$1
+RewriteRule ^([A-Za-z-]+).msg$ index.php?msg=$1
+RewriteRule ^([A-Za-z-]+)/([A-Za-z-]+)/([0-9-]+)/$ index.php?psl=$1&do=$2&id=$3
+RewriteRule ^([A-Za-z-]+)/([a-zA-Z_0-9-]+).html$ index.php?psl=$1&do=$2
+RewriteRule ^([A-Za-z-]+)/([a-zA-Z_0-9-]+).msg$ index.php?psl=$1&msg=$2
+RewriteRule ^([A-Za-z-]+)/([a-zA-Z_0-9-]+)/([a-zA-Z_0-9-]+).msg$ index.php?psl=$1&do=$2&msg=$3
+RewriteRule ^([A-Za-z-]+)/([a-zA-Z_0-9-]+)/([a-zA-Z_0-9-]+)/$ index.php?psl=$1&do=$2&step=$3
+RewriteRule ^([A-Za-z-]+)/([a-zA-Z_0-9-]+)/([a-zA-Z_0-9-]+).html$ index.php?psl=$1&do=$2&step=$3
+RewriteRule ^([A-Za-z-]+)/([a-zA-Z_0-9-]+)/([A-Za-z-]+)/([a-zA-Z_0-9-]+).html$ index.php?psl=$1&do=$2&step=$4&id=$4
+RewriteRule ^([A-Za-z-]+)/(.*).html$ index.php?psl=$1&do=$2
+RewriteRule ^print/(.*)/$ print_car.php?do=show&id=$1

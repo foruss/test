@@ -1,0 +1,697 @@
+/* CSS Document */
+
+/* 
+
+Title:			Insert CSS Title (i.e. Global or Typography, Structure, Forms, Etc...)
+Description:	Insert CSS Description that defnes understanding of what this CSS page represents, i.e. Main typogrhy for global page templates. 
+Author:			Sapient Corp. 
+Updated:		December 05 2007
+Updated From:	Jeffrey Blais - Sapient Corp.
+
+*/
+
+
+/* Global Elements */
+
+html 		{min-height:100%; margin-bottom:1px;}
+body		{font-family:Arial, Helvetica, sans-serif; font-size:70%; margin:0px auto; padding: 0; color:#4e4e4e; background:#5d7ca7;}
+
+a {
+	color:#227ad3;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+	color:#f09800;
+	text-decoration:none;
+}
+a:focus, a:active	{outline:none;}
+img {
+	border:0;
+}
+input,
+select {
+	color:#4e4e4e;
+	font-size:1em;
+	height:auto;
+}
+input[type="text"] {
+	border:1px solid #7e9db9;
+}
+/* ADDED by PBOGGS */ input[type="password"] {
+	border:1px solid #7e9db9;
+}
+input[type="image"] {
+	border:none !important; margin-top:-4px;
+	height:auto !important;
+}
+input[type="checkbox"] {
+    width:12px; height:12px; margin:3px; padding:0px; vertical-align:middle;
+    margin-right: 3px;
+    border: none;
+}
+input.checkbox	{margin-right:3px;}
+
+input[type="radio"] {
+	vertical-align:text-bottom;
+}
+#others input[type="checkbox"] {
+	margin-left:5px;
+}
+
+/* ADDED by PBOGGS */ .saleDateText	{text-indent:2px; position:relative; top:-2px;}
+/* added by PBoggs */ #vehicleType	{text-indent:2px; width:150px;}
+
+form {
+	margin:0; 
+	padding:0;
+}
+ul { 
+	margin:0; 
+	padding:0;
+	list-style:none;
+}
+#header li,
+#secondary_nav ul li {
+	display:inline; 
+	margin-left:10px;
+}
+input.button {
+	font-size:1em;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	border:none;
+	height:24px;
+	padding-bottom:3px;
+	_padding-bottom:1px;
+	color:#ffffff;
+	cursor:pointer;
+	margin:0 2px;
+	margin-top:-4px;
+}
+.bluebutton {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bg_blueButton.gif) repeat-x ;
+}
+.orangebutton {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bg_orangeButton.gif) repeat-x ;
+}
+.graybutton {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bg_grayButton.gif) repeat-x ;
+}
+/* ADDED by PBOGGS */ #header_search .graybutton	{font-size:1.1em; position:relative; top:1px;}
+/* ADDED by PBOGGS */ #header_search[id] .graybutton	{top:-1px;} /* for ffox and ie7 */
+*:first-child+html #header_search .graybutton		{top:1px;} /* I need a hack for ie7 ONLY  bummer that they dont display the same */
+
+/* tool tip styles */
+#dhtmlgoodies_tooltip		{font-size:11px; background-color:#fff; border:1px solid #c3c3c3; position:absolute; display:none; z-index:20000; padding:5px; -moz-border-radius:6px;	/* Rounded edges in Firefox */}
+#dhtmlgoodies_tooltip p		{font-size:11px; margin:5px;}
+#dhtmlgoodies_tooltipShadow	{position:absolute; background-color:#c3c3c3; display:none; z-index:10000; opacity:0.7; filter:alpha(opacity=70); -khtml-opacity:0.7; -moz-opacity:0.7; -moz-border-radius:6px;	/* Rounded edges in Firefox */}
+
+
+.bdrWhite {
+    border-right: 1px solid #ffffff;
+}
+.last {
+	border:none !important;
+}
+
+#container .checklist {
+	margin:0px; padding:2px 10px 2px 5px; overflow:auto; overflow-y:auto; overflow-x:hidden; border:1px solid #7e9db9; height:80px; background:none;
+	width:150px;
+}
+#container .longlist {
+	width:200px !important;
+}
+#container .checklist li {
+	margin:0; margin-bottom:2px; _margin-bottom:0px !important; padding:0 !important; border:none; display:block; float:none; height:auto;
+}
+#container .checklist li label {
+	margin:0 !important; padding:0 !important; vertical-align:top; color:#000000; font-weight:normal;
+	_display:inline;
+}
+
+#container #odometerList {width:130px !important;}
+#container #extColorList {width:90px !important;}
+
+
+/* General format rules */
+#pageFrame		{position:relative; width:972px; padding:0px 10px; margin:0px auto; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/page-frame-bg.gif') repeat-y;}
+#pageFooter		{clear:both; position:relative; width:972px; height:42px; padding:16px 10px 30px 10px; margin:0px auto; font-family:Arial, Helvetica, sans-serif; color:#666; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/page-frame-bottom-bg.gif') bottom no-repeat; _padding:10px 10px;}
+
+
+/* header */
+#header {
+	background:#ffffff;
+}
+#header_content { 
+	margin:0; 
+	padding:10px 20px 9px 14px;
+	font-size:.9em;
+}
+#secondary_nav {
+	float:right; 
+	text-align:right;
+	margin-top:0px;
+}
+#secondary_nav ul li a{
+	padding-left:10px; 
+	font-weight:normal;
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/arrow_orange.jpg) 2px no-repeat; 
+}
+#header_search {
+	margin-top:10px;
+	font-weight:bold;
+	position:relative;
+	_left:4px /* ie 6 hack to right align with subnav */
+}
+
+#header_search[id]	{left:-8px;} /* FFox and IE7 see this hack to right align with subnav */
+*:first-child+html #header_search	{left:0px;} /* ie 7 hack OVERRIDE to right align with subnav */
+
+.loginPage #header_search #welcome {
+	display:none;
+}
+
+#header_search input.searchBox {
+	background-color:transparent;
+	background-image:none;
+	margin:0px; padding:4px 5px; width:170px; border:0px !important; border:none !important; font-size:11px; color:#aaa;
+}
+#header_search #welcome	{float:left; position:relative; top:4px; font-size:inherit; text-indent:1px;}
+#header_search #searchInput	{background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/vehicle-search-bg.gif') no-repeat; float:left; height:30px; position:relative; z-index:10000; margin:0px 0px 0px 8px; text-align:right;}
+
+#header_search[id] input.graybutton	{position:relative; left:8px;}
+*:first-child+html #header_search input.graybutton	{position:relative; left:2px;}
+
+#header_search input.searchBox.on {
+	color:#000;
+}
+
+#header_search a {
+	margin-left:10px;
+	margin-right:10px;
+}
+#header h1 {
+	margin:0; padding:0;
+	width:150px; height:25px; 
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/manheimLogo.jpg) no-repeat; 
+	position:relative;
+	top:16px;
+	left:8px;
+}
+#header h1 span {
+	display:none;
+}
+#header h1 a {
+	display:block;
+	width:150px; height:25px;
+}
+
+
+/* Global Navigation */
+#globalNav							{clear:both;}
+#globalNav ul						{margin:0px; padding:0px 0px 0px 11px; height:61px; line-height:1; z-index:999; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/globalNav/background.gif') repeat-x;}
+#globalNav a, #global_nav a:hover	{text-decoration:none; font-weight:bold; text-transform:uppercase;}
+#globalNav ul li					{margin:0px; padding:0px; position:relative; text-align:center; float:left; display:inline;}
+#globalNav ul li a					{float:left; margin:0px; padding:0px 28px 0px 0px; height:38px; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/globalNav/itemRight.gif') no-repeat right 0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px; color:#fff;}
+#globalNav ul li a span				{float:left; padding:22px 0px 0px 28px; height:18px; display:block; cursor:pointer; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/globalNav/itemBackground.gif') no-repeat;}
+#globalNav ul li a:visited			{text-decoration:none;}
+#globalNav ul li a:hover			{background-position:right -40px;}
+#globalNav ul li a:hover span		{background-position:0px -40px; color:#17447a;}
+
+
+/* active tab  DISABLED FOR RELEASE 4.1 
+.powerSearch li#newSearchTab a, .workbook li#workbookTab a, .helpPage li#helpTab a, .whatsNewPage li#newTab a						{background-position:right -80px;}
+.powerSearch li#newSearchTab a span, .workbook li#workbookTab a span, .helpPage li#helpTab a span, .whatsNewPage li#newTab a span	{background-position:0px -80px; padding-top:20px; height:25px; color:#2961a2;} */
+
+/* override hover on active tab DISABLED FOR RELEASE 4.1 
+.powerSearch li#newSearchTab a:hover, .workbook li#workbookTab a:hover, .helpPage li#helpTab a:hover, .whatsNewPage li#newTab a:hover						{background-position:right -80px;}
+.powerSearch li#newSearchTab a:hover span, .workbook li#workbookTab a:hover span, .helpPage li#helpTab a:hover span, .whatsNewPage li#newTab a:hover span	{background-position:0px -80px; padding-top:20px; height:25px; color:#2961a2;} */
+
+
+
+/* Page Container */
+#container {
+	background:#a6b7cb;
+}
+#container #container_bg {
+	position:relative; /* added by PBOGGS for pagination, print dialog and the gradient vanishing problem */ 
+	margin:0;
+	padding:15px 20px; 
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bg_main_gradient.jpg) repeat-x #a6b7cb;
+    _height:1%; /* added by PBOGGS Crazy IE6 Hack to fix bg */
+}
+#container h2 {
+	margin:0 15px 0 2px;
+	padding:5px 0px 5px 0px;
+	height:16px;
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/title_powerSearch.gif) 0 no-repeat; padding-left:160px; margin-bottom:5px; font-size:1em;
+}
+/*
+#container #content_header {
+}
+#container #content_header #passengerVehicles {
+	width:150px;
+}
+#container #content_header ul {
+	float:right;
+}
+#container #content_header ul li {
+	display:inline;
+}
+#container #content_header select {
+	margin-top:4px; 
+	margin-left:10px;
+	vertical-align:top; 
+	width:140px;
+	height:18px; 
+}*/
+
+/* Main  */
+#container #main {
+	overflow:hidden; 
+	_height:1%;
+	clear:both;
+}
+#container #main_header {
+}
+#container #main_header .right {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/top_right_content.png) top right no-repeat;
+}
+#container #main_header .left {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/top_left_content.png) top left no-repeat;
+}
+#container #main_header .main_header_bg { 
+	margin:0 17px; 
+	padding:0 20px; 
+	font-size:.7em;
+	height:17px; 
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/top_content.png) top repeat-x;
+}
+
+/* Main Content  */
+#container #main_content {
+	behavior:url("pngbehavior.htc");
+	overflow:hidden; _height:1%;
+}
+#container #main_content .right {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/right_content.png) bottom right repeat-y;
+	_background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/IE_right_content.png) bottom right repeat-y;
+}
+
+#container #main_content .left {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/left_content.png) bottom left repeat-y;
+	_background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/IE_left_content.png) bottom left repeat-y;
+}
+
+#container #main_content #main_content_bg {
+	margin:0 13px; 
+	padding:10px 10px; 
+	background:#ffffff;
+	overflow:hidden; _height:1%;
+}
+
+
+#container #main_footer {
+}
+#container #main_footer .right {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bottom_right_content.png) bottom right no-repeat;
+	_background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/IE_bottom_right_content.png) bottom right no-repeat;
+}
+#container #main_footer .left {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bottom_left_content.png) bottom left no-repeat;
+	_background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/IE_bottom_left_content.png) bottom left no-repeat;
+}
+#container #main_footer .main_footer_bg {
+	margin:0 17px; 
+	padding:0 20px;  
+	height:17px; 
+	font-size:.7em;
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bottom_content.png) bottom repeat-x;
+	_background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/IE_bottom_content.png) bottom repeat-x;
+}
+
+
+/* PowerSearch page specific */
+
+/* Choose Vehicle */
+#choose_vehicle {
+	margin-bottom:10px;
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/choose_vehicle.jpg) 0 -2px no-repeat;
+	min-height:150px;
+}
+#choose_vehicle div#choose_vehicle_items {
+	margin-top:5px; margin-left:60px; padding:10px; height:90px; 	
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bg_powerSearch.jpg) repeat-x;
+}
+#choose_vehicle_items div.clear	{clear:left; height:1px; line-height:1px;}
+#choose_vehicle h3 {
+	margin:0; 
+	margin-left:60px;
+	padding:0;
+	font-size:1.4em;
+}
+#choose_vehicle ul {
+	float:left; display:inline;
+}
+
+#choose_vehicle ul li {
+	float:left; 
+	margin-right:7px;
+	padding-right:9px; 
+	padding-left:2px;
+	border-right:1px solid #d8d8d8;
+}
+
+#choose_vehicle ul.checklist {
+	float:none; display:block; width:130px !important;
+}
+
+#choose_vehicle ul li label,
+#leftNav_vehicle label {
+	display:block; 
+	color:#4e4e4e; 
+	margin-bottom:4px; 
+	font-weight:bold;
+}
+#choose_vehicle ul li label.label_inline,
+#leftNav_vehicle label.label_inline {
+	display:inline;
+	margin:0 5px;
+	color:#636467; 
+	font-weight:normal;
+}
+#choose_vehicle .onlyVehicle {
+	clear:both; border:none; margin:0; width:294px;
+}
+#choose_vehicle .onlyVehicle label {
+	display:inline;
+}
+.mTop10 {
+	margin-top:10px !important;
+}
+.mBot10 {
+	margin-bottom:10px !important;
+}
+
+
+#advancedOptions {
+	margin-left:70px; margin-top:0px; position:relative; top:-10px;
+	clear:left; /* added by PBOGGS to clear the float on walled garden (its good to clear a float anyway) */
+}
+
+*:first-child+html #advancedOptions	{top:0px !important;} /* ie7 only hack */
+
+#advancedOptions_detail {
+	margin:0; padding:0;
+	background:#eef1f6; 
+	height:auto; overflow:hidden !important; _height:1%;								
+}
+#advancedOptions_detail ul {
+	border:none; margin:0;
+	height:auto !important;
+	background:none;						
+}
+#advancedOptions_detail ul li {
+	 padding:10px 8px;
+	 border:none;
+}
+#advancedOptions_detail ul li select	{width:132px;}
+#advancedOptions_detail ul.checklist {
+	height:80px !important;
+	width:120px !important;
+	overflow:auto; overflow-y:auto; overflow-x:hidden;
+	background-color:#FFFFFF; 
+}
+#container #advancedOptions_detail #extColorList {width:120px !important;}
+/* Choose Location */
+#choose_location { 
+	overflow:hidden; 
+	_height:1%;
+	margin-top:10px; 
+	margin-bottom:20px; 
+	clear:both;
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/choose_location.jpg) 0 -2px no-repeat;
+}
+#choose_location h3 {
+	margin:0; 
+	margin-left:60px;
+	padding:0; 
+	font-size:1.4em;
+}
+#choose_location span {
+	float:left;
+}
+#choose_location ul {
+	margin-top:5px;
+	margin-left:60px; 
+	padding:10px; 
+    _height: 107px; 
+    overflow: auto; 
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bg_powerSearch.jpg) repeat-x; 
+}
+#choose_location ul li {
+	float:left; 
+	margin-right:10px;
+	padding-right:10px; 
+	border-right:1px solid #d8d8d8;
+}
+#choose_location ul li label {
+	display:block; 
+	margin-bottom:4px; 
+	color:#4e4e4e; 
+	font-weight:bold;
+}
+#choose_location ul li label.label_inline {
+	display:inline;
+	margin:0 5px;
+	color:#636467; 
+	font-weight:normal;
+}
+
+/* Choose Seller */
+#choose_seller {
+	overflow:hidden; 
+	_height:1%;
+	margin-bottom:0px; 
+	clear:both;
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/choose_seller.jpg) 0 -2px no-repeat;
+}
+#choose_seller h3 {
+	margin:0; 
+	padding:0; 
+	margin-left:60px;
+	font-size:1.4em;
+}
+#choose_seller span {
+	float:left;
+}
+#choose_seller ul {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/bg_powerSearch.jpg) repeat-x; 
+    _height: 107px; 
+    overflow: auto; 
+	margin-top:5px; 
+	padding:10px; 
+	margin-left:60px;
+}
+#choose_seller ul li {
+	float:left; 
+	margin-right:10px;
+	padding-right:10px; 
+	border-right:1px solid #d8d8d8;
+}
+#choose_seller ul li label {
+	display:block; 
+	margin-bottom:4px; 
+	color:#4e4e4e; 
+	font-weight:bold;
+}
+#choose_seller ul li label.label_inline {
+	display:inline;
+	color:#636467; 
+	font-weight:normal;
+	margin:0 5px;
+}
+#choose_seller ul li select {
+	width:140px;
+}
+#choose_seller ul li img {
+	margin-bottom:-2px;
+}
+#choose_seller ul li.last	{position:relative;}
+
+/* Others */
+#others {
+	margin-left:60px;
+	text-align:right; 
+	clear:both;
+}
+#others ul {
+	padding-bottom:5px;
+}
+#others input,
+
+#others ul li checkbox {
+	border:none !important;
+}
+#others ul li label {
+	vertical-align:top;
+}
+.buttons {
+	border-top:1px solid #d4d4d4; padding-top:10px;
+	margin-top:10px;
+}
+.buttons li {
+	display:inline;
+}
+
+.print {
+	background:url(/imageserver/plumtree/portal/custom/Manheim/images/new/icn_print.gif) no-repeat; padding-left:20px;
+}
+
+
+/* POPUP */
+body#greybox	{background-image:none !important; background-color:#FFFFFF;}
+.popup {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:12;
+	width:100%;
+	height:100%;
+	/*padding-top:-60px;*/
+	/*background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/popup_bg.png') top left repeat; 
+	_background-image:url('/imageserver/plumtree/portal/custom/Manheim/images/new/popup_blank_bg.gif'); /* for IE; keeps user from clicking through layer */*/
+}
+/* filter for ie only to get the png to work */
+* html .popup {
+	/*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/popup_bg.png',sizingMethod='scale'); */
+}
+.popup_container {
+	margin:0 auto; /* centers popup in page */
+	width:510px !important; /* change to desired popup width */
+	width /**/:550px; /* for IE 5.5 */
+	border:0px solid #575757;
+	background:#fff;
+	text-align:left;
+	padding:0;
+}
+table.GB_t_frame	{background-color:none !important; border:0 !important; margin:0; padding:0;}
+
+.popup_container h3 {
+	margin:2px 0px 0px 0px; padding:5px 8px; background:#326cb0; color:#ffffff; font-size:14px; /* added by PBOGGS inheritance was dif in ffox */
+}
+.popup_container h3 span {
+	float:right;
+}
+.popup_container ul {
+	padding:6px 10px; overflow:hidden; _height:1%;
+}
+.popup_container ul li {
+	margin-right:10px; margin-bottom:3px; clear:both;
+	padding:0;
+	line-height:13px; /* edited by PBOGGS for IE6 */
+}
+#greybox[id] .popup_container ul li	{padding-bottom:5px; line-height:15px;} /* edited by PBOGGS for FireFox - IE7 also see this, fix below */
+*:first-child+html #greybox .popup_container ul li	{padding-bottom:0px; line-height:13px;} /* edited by PBOGGS for IE7, too much padding causes big issues across browsers. margin should be used whenever possible */
+
+.popup_container ul li label {
+	width:90px; float:left; font-weight:bold; margin-right:10px; /* edited by PBOGGS */
+}
+.popup_container ul li label.auto {
+	width:auto;
+}
+.popup_container ul li span {
+	width:auto; float:left; border:1px;
+}
+.popup_container ul li span label {
+	vertical-align:top; margin-bottom:3px; width:auto; overflow:hidden; clear:left;
+}
+/* added by PBOGGS */ .popup_container ul li span label #emailAddress	{width:235px;}
+/* added by PBOGGS */ .popup_container ul li span label #phone	{width:152px;}
+
+.popup_container ul li.note {
+	margin-top:20px;
+}
+.popup_container ul li.buttons {
+	text-align:right; border-top:1px solid #b2b2b2; padding:8px 0 0 0; margin:0;
+}
+
+/* popup-cover used to cover select form elements in IE */
+#popup-cover {
+	position:absolute;
+	top:0;
+	left:0; /* left of popup-container minus negative margin */
+	width:100%;
+	height:100%;
+	z-index:9;
+}
+* html #popup-cover {
+    filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=80);
+}
+
+/* Page Submit 
+#page_submit {
+	border-top:1px solid #d4d4d4; margin-top:10px; padding-top:10px;
+}*/
+
+td.mmrNote p, div.mmrNote p	{margin:10px !important;}
+
+/* Footer */
+#pageFooter p			{margin:0px 0px 6px 0px;}
+#pageFooter .agreement	{padding-left:20px;}
+#pageFooter .contact	{float:left; padding-left:20px;}
+#pageFooter .copyright	{float:right; margin-right:13px; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/footerLogo.gif') top right no-repeat; width:180px; padding-top:26px; position:relative; top:-20px; text-align:right; font-size:10px;}
+#pageFooter[id] .copyright	{margin-right:24px;}
+#pageFooter a			{color:#1c4c84; text-decoration:none;}
+#pageFooter a:hover		{color:#a2b4ca; text-decoration:underline;}
+
+
+
+#helpWrapper h2			{margin-bottom:15px;}
+#helpWrapper h3			{font-size:14px; margin:0px 7px; padding:5px 0px 5px 0px; color:#369;}
+#helpWrapper h4			{font-size:12px; margin:0px 7px; padding:0px 0px 5px 0px; color:#369; height:auto;}
+#helpWrapper ul			{margin:0px 15px; padding:2px 10px;}
+#helpWrapper li			{padding:4px 10px; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/icn_link.gif') 0px 9px no-repeat; line-height:16px;}
+#helpWrapper p			{margin:0px 7px; padding:0px 0px 10px 0px;}
+
+
+#whatsNewWrapper h2		{margin-bottom:15px;}
+#whatsNewWrapper h3		{font-size:14px; margin:0px 7px; padding:0px 0px 5px 0px; color:#369;}
+#whatsNewWrapper ul		{margin:0px 15px; padding:2px 10px;}
+#whatsNewWrapper li		{padding:4px 10px; background:url('/imageserver/plumtree/portal/custom/Manheim/images/new/icn_link.gif') 0px 9px no-repeat; line-height:16px;}
+#whatsNewWrapper p		{margin:0px 7px; padding:0px 0px 10px 0px;}
+
+
+#printSettings[id] .printBg		{background:url(/imageserver/plumtree/portal/custom/Manheim/images/print-bg.png) no-repeat;}
+
+/* WARNING PNG FILTER MUST BE CHANGED WHEN MOVED FROM SERVER TO SERVER */ 
+#printSettings .printBg			{position:absolute; top:0px; right:20px; width:263px; height:175px; z-index:99999; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://dev.manheimportal.imanheim.com:8010/imageserver/plumtree/portal/custom/Manheim/images/print-bg.png', sizingMethod='scale');}
+
+#printSettings .content			{position:absolute; top:0px; right:26px; width:241px; height:149px; padding:8px; z-index:99999;}
+#printSettings .content .note	{font-size:11px; margin-left:24px;}
+#printSettings label			{display:block;}
+#printSettings .header			{border-bottom:1px solid #ebebeb; margin-bottom:6px; font-weight:bold; font-size:13px;}
+#printSettings a.close			{background:url('/imageserver/plumtree/portal/custom/Manheim/images/x.gif') no-repeat right center; padding:0px 16px 0px 0px; margin-top:-23px; float:right; width:14px; height:14px;}
+#printSettings a.close span		{display:none;}
+#printSettings .buttons			{border-top:1px solid #ebebeb; margin:10px 0px;}
+#printSettings .default			{font-weight:bold; color:#6c80a7; margin-left:24px;}
+#printSettings .default	input	{display:none;}
+
+#printSettings[id] .btnPrint2	{background:url('/imageserver/plumtree/portal/custom/Manheim/images/en/btn-print2.png') no-repeat;}
+#printSettings .btnPrint2		{width:62px; height:17px; position:absolute; right:10px; bottom:4px; margin-top:0px; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://dev.manheimportal.imanheim.com:8010/imageserver/plumtree/portal/custom/Manheim/images/en/btn-print2.png', sizingMethod='scale'); cursor:pointer;}
+#printSettings .btnPrint2 span	{display:none;}
+
+
+#error-wrapper                  {text-align:center; margin:20px auto; width:240px;}
+#error-msg                      {border:1px solid #036; background-color:#FF9900; position:relative; width:238px; padding:8px; font-size:11px; margin:12px 4px 4px 12px;color:#000000;}
+#error-msg img.warning-icon     {position:absolute; top:-13px; left:-13px;}
+#error-msg span.red             {font-size:11px;}
+
+/* Login Screen */
+#login                          {clear:both; border:1px solid #999 !important; padding:10px; width:300px !important; float:left;}
+/* added by PBOGGS */ #login label	{display:block; width:60px; float:left; margin-top:1px; _margin-top:2px;}
+#login form input	{border:1px solid #7e9db9;}
+#printLogo	{display:none;}

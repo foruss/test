@@ -1,0 +1,49 @@
+﻿.head-spacer .head {
+	background-image: url('../i/bg-head.gif');
+}
+
+.head .water .shadow {
+		background: url('../i/water-sh2.png') 0 0 no-repeat;
+}
+
+#content .center-container {
+	width: 516px;
+}
+
+#lang_selector #lang_select {
+	width: 4.8em;
+}
+
+#lang_selector #lang_select li a,
+#lang_selector #lang_select li.label,
+#lang_selector #lang_select li.selected {
+	width: 100%;
+}
+
+#content .center-container.second {
+	width: 748px;
+}
+
+.buttons a.sklad {
+	background-image: url('../i/buttons.gif');
+}
+
+.buttons a.new {
+	background-image: url('../i/buttons.gif');
+}
+
+.buttons a.old {
+	background-image: url('../i/buttons.gif');
+}
+
+.buttons a.avar {
+	background-image: url('../i/buttons.gif');
+}
+
+.buttons.relative a.bitie {
+	background-image: url('../i/buttons-dostavka.gif');
+}
+
+.buttons.relative a.goodauto {
+	background-image: url('../i/buttons-dostavka.gif');
+}
